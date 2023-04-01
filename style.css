@@ -32,16 +32,18 @@ body {
   background: var(--background);
   box-shadow: var(--large-shadow);
   border-radius: var(--border-radius);
-  padding: 1rem;
+  padding: 1rem 0;
+  width: 100%;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: var(--transition);
 }
 
-.neomorphic-button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 8px 8px 16px #c9ccd1, -8px -8px 16px #ffffff;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .neomorphic-nav {
@@ -61,19 +63,14 @@ body {
 
 .neomorphic-nav a {
   text-decoration: none;
-  color: #6c757d;
+  color: var(--mint);
   font-size: 1rem;
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
   padding: 0.5rem 1rem;
-  box-shadow: inset 5px 5px 5px #c9ccd1, inset -5px -5px 5px #ffffff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2rem;
 }
-
-.neomorphic-nav a:hover {
-  transform: translateY(-2px);
-  box-shadow: inset 3px 3px 3px #c9ccd1, inset -3px -3px 3px #ffffff;
-}
-
 /* general style for section */
 
 section {
@@ -129,7 +126,45 @@ section {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+.card .actions {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .card img {
+    width: 40%;
+    height: 80%;
+  }
+
+  .card .content {
+    width: 50%;
+    height: 80%;
+    font-size: 1rem;
+    justify-content: space-between;
+  }
+}
+
 /* section */
+
+#hero {
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--mint);
+}
+
+#hero h1:nth-child(1) {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#hero p {
+  width: 80%;
+  text-align: center;
+  
+}
 
 #mint,
 #mint button {
